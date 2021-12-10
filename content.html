@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+ Eng. Mohamed Riyad <@RyadPasha>
+ Let’s start coding ..
+-->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure HTML Poll Design | @RyadPasha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>Pure HTML Poll Design</header>
+    <div class="poll-area">
+      <input type="radio" name="poll" id="opt-1">
+      <input type="radio" name="poll" id="opt-2">
+      <input type="radio" name="poll" id="opt-3">
+      <input type="radio" name="poll" id="opt-4">
+      <!-- <input type="checkbox" name="poll" id="opt-1">
+      <input type="checkbox" name="poll" id="opt-2">
+      <input type="checkbox" name="poll" id="opt-3">
+      <input type="checkbox" name="poll" id="opt-4"> -->
+      <label for="opt-1" class="cus-option">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">HTML</span>
+          </div>
+          <span class="percent"></span>
+        </div>
+        <div class="progress"></div>
+      </label>
+      <label for="opt-2" class="cus-option">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Java</span>
+          </div>
+          <span class="percent"></span>
+        </div>
+        <div class="progress"></div>
+      </label>
+      <label for="opt-3" class="cus-option">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Python</span>
+          </div>
+          <span class="percent"></span>
+        </div>
+        <div class="progress"></div>
+      </label>
+      <label for="opt-4" class="cus-option">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">jQuery</span>
+          </div>
+          <span class="percent"></span>
+        </div>
+        <div class="progress"></div>
+      </label>
+      <button type="button" class="castvote">Vote!</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #606c88;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+::selection{
+  color: #fff;
+  background: #606c88;
+}
+.wrapper{
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+}
+.wrapper .poll-area{
+  margin: 20px 0 15px 0;
+}
+.poll-area .cus-option{
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+}
+.poll-area .cus-option:hover{
+  border-color: #ddd;
+}
+.cus-option.selected{
+  border-color: #606c88!important;
+}
+.cus-option .row{
+  display: flex;
+  pointer-events: none;
+  justify-content: space-between;
+}
+.cus-option .row .column{
+  display: flex;
+  align-items: center;
+}
+.cus-option .row .circle{
+  height: 19px;
+  width: 19px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+[dir="rtl"] .cus-option .row .circle {
+  margin-right: 0 !important;
+  margin-left: 10px;
+}
+.cus-option.selected .row .circle{
+  border-color: #606c88;
+}
+.cus-option .row .circle::after{
+  content: "";
+  height: 11px;
+  width: 11px;
+  background: #606c88;
+  border-radius: inherit;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: none;
+}
+.poll-area .cus-option:hover .row .circle::after{
+  display: block;
+  background: #e6e6e6;
+}
+.cus-option.selected .row .circle::after{
+  display: block;
+  background: #606c88!important;
+}
+.cus-option .row span{
+  font-size: 16px;
+  font-weight: 500;
+}
+.cus-option .row .percent{
+  display: none;
+}
+.cus-option .progress{
+  height: 7px;
+  width: 100%;
+  position: relative;
+  background: #f0f0f0;
+  margin: 8px 0 3px 0;
+  border-radius: 30px;
+  display: none;
+  pointer-events: none;
+}
+.cus-option .progress:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  background: #ccc;
+  width: calc(1% * var(--wd));
+  border-radius: inherit;
+  transition: all 0.2s ease;
+}
+.cus-option.selected .progress::after{
+  background: #606c88;
+}
+.cus-option.selectall .progress,
+.cus-option.selectall .row .percent{
+  display: block;
+}
+.castvote {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+  text-align: center;
+  color: #606c88;
+  width: 100%;
+}
+.castvote:not([disabled]) {
+  cursor: pointer;
+}
+.castvote:not([disabled]):hover {
+  background: #ddd;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
